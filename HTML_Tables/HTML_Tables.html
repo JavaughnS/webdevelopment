@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<!-- Completed by Javaughn -->
+<head>
+<title>HTML Tables</title>
+<!-- Embedded style sheet -->
+<style>
+	table {
+			width: 800px
+			}
+	#tab1 {
+			border-top: 6px solid navy;
+			border-radius: 25px;
+			font-family: Arial;
+			font-size: 19px;
+			color: navy;
+			padding-bottom: 15px
+			}
+	#tab2 {
+			border: 2px solid black;
+			border-collapse: collapse;
+			font-family: Arial
+			}
+	#tab2 th {
+				border: 1px dotted white;
+				color:white;
+				background-color:black
+				}
+	#tab2 td {
+				border: 1px dotted black;
+				text-align: center
+				}
+	#tab2 tr:nth-child(odd) {background-color:gainsboro}
+	#tab2 tr:nth-child(even) {background-color:gray}
+	.highlight {
+				color:red;
+				font-weight: bold
+				}
+</style>
+</head>
+<body>
+<table id = "tab1">
+	<tr>
+		<td><img src = "a_a_logo.png" /></td><td><div style = "font-size: 40px">The Ambient Air Service Company</div><br><i>Monitoring to make breathing easier</i></td>
+	</tr>
+</table>
+<br>
+<!-- Generate table -->
+<table id = "tab2">
+	<caption><strong>Ambient Air Quality in Hamilton 2005-2016</strong></caption>
+	<tr>
+		<th rowspan = "2">Year</th><th colspan = "2"># of Days</th><th rowspan = "2">Notes</th>
+	</tr>
+	<tr>
+		<th>Smog Advisory</th><th>Poor Air Quality</th>
+	</tr>
+	<tr>
+		<td>2005</td><td>20</td><td class = "highlight">45</td><td>July had 10 days of each</td>
+	</tr>
+	<tr>
+		<td>2006</td><td>5</td><td>11</td><td></td>
+	</tr>
+	<tr>
+		<td>2007</td><td>17</td><td class = "highlight">32</td><td>August had many foggy mornings</td>
+	</tr>
+	<tr>
+		<td>2008</td><td>5</td><td>11</td><td></td>
+	</tr>
+	<tr>
+		<td>2009</td><td>1</td><td>4</td><td></td>
+	</tr>
+	<tr>
+		<td>2010</td><td>5</td><td>8</td><td></td>
+	</tr>
+	<tr>
+		<td>2011</td><td>8</td><td>2</td><td></td>
+	</tr>
+	<tr>
+		<td>2012</td><td>9</td><td class = "highlight">17</td><td>High amount of Construction in June</td>
+	</tr>
+	<tr>
+		<td>2013</td><td>9</td><td>2</td><td></td>
+	</tr>
+	<tr>
+		<td>2014</td><td></td><td></td><td></td>
+	</tr>
+	<tr>
+		<td>2015</td><th colspan = "3" rowspan = "3" style = "color:white; background-image: repeating-linear-gradient(to right, black 1.5%, red 3%, black 6%)">No Data Available</th>
+	</tr>
+	<tr>
+		<td>2016</td>
+	</tr>
+	<tr>
+		<td>2017</td>
+	</tr>
+</table>
+<br>
+<div style = "width: 800px; text-align: center; color: gray; font-family: Arial; font-size: 14px">
+	Data from Downtown Hamilton Air Monitoring Station
+</div>
+<br>
+<div style = "font-family: Arial">
+	&copy; <i>The Ambient Air Service Company, 4242 Barton St E., Hamilton Ontario, L8M 3H9</i>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<!-- Completed by Javaughn -->
+<head>
+	<title>HTML Forms</title>
+	<!-- Embedded style sheet -->
+	<style>
+		body {font-family:Arial}
+		.foothead {width:100%; text-align:center}
+		#leftside {float:left; width: 50%}
+		#rightside {float:left; width: 400px}
+		form {width:100%}
+		fieldset {border-color: navy; background-color: gainsboro}
+		legend {color:white; background-color:navy; padding: 5px}
+		input, select {color:green; font-weight:bold; margin:4px}
+		.lblspace {display: inline-block; width: 200px}
+		.inspace {display: inline-block; width: 175px}
+		textarea {color:green; margin:4px}
+	</style>
+</head>
+
+<body>
+<div class = "foothead" style = "color:white; background-color:navy">
+	<h1>ACME Corporation - Lab Analysis</h1>
+</div>
+<!-- Format form -->
+<form id = "lab3form" name = "ACMEForm" action = "https://csunix.mohawkcollege.ca/tooltime/echo.php" method = "post">
+	<fieldset>
+		<legend>Step 1: Identification</legend>
+			<label class = "lblspace" for = "empID">Employee ID</label><input id = "empID" name = "employeeID" value = "" maxlength = "4" required />*<br>
+			<label class = "lblspace" for = "name">Employee Name</label><input id = "name" name = "name" value = "" maxlength = "20" required />*
+	</fieldset>
+	<br>
+	<fieldset>
+		<legend>Step 2: Metal Analysis Selection</legend>
+		<div id = "leftside">
+			<input type = "radio" id = "normal" name = "analysisType" value = "normal" checked /><label for = "normal">Normal</label>
+			<input type = "radio" id = "dupe" name = "analysisType" value = "duplicate"/><label for = "dupe">Duplicate</label>
+			<input type = "radio" id = "extra" name = "analysisType" value = "extra sample"/><label for = "extra">Extra Sample</label>
+			<input type = "radio" id = "emerg" name = "analysisType" value = "emergency"/><label for = "emerg">Emergency</label>
+			<br>
+			<label class = "lblspace" for = "bottleID">Sample Bottle ID</label><input class = "inspace" id = "bottleID" name = "bottleID">*<br>
+			<label class = "lblspace" for = "sampDate">Sample Date</label><input class = "inspace" id = "sampDate" name = "date" type = "date" value = "2016-01-25" required />*<br>
+			<label class = "lblspace" for = "sampTime">Sample Time</label><input class = "inspace" id = "sampTime" name = "time" type = "time" value = "12:00" required />*
+		</div>
+		<div id = "rightside">
+		<fieldset>
+			<legend>Analysis Required</legend>
+
+			Select all metal samples analysis that apply <br>
+			<input id = "fe" name = "metalType[]" type = "checkbox" value = "iron" checked><label for = "fe">Fe -Iron</label><br>
+			<input id = "mg" name = "metalType[]" type = "checkbox" value = "magnesium"><label for = "mg">Mg - Magnesium</label><br>
+			<input id = "cd" name = "metalType[]" type = "checkbox" value = "cadmium" checked><label for = "cd">Cd - Cadmium</label><br>
+			<input id = "hg" name = "metalType[]" type = "checkbox" value = "mercury"><label for = "hg">Hg - Mercury</label>
+		</fieldset>
+		</div>
+	</fieldset>
+	<br>
+	<fieldset>
+		<legend>Step 3: Other Information & Submission</legend>
+			<span class = "lblspace">Reason</span>
+			<select name = "nalyreason">
+				<option>Internal Sampling</option>
+				<option>Government Inspection</option>
+				<option>QA/QC</option>
+			</select>
+			<br>
+			<span style = "display: inline-block; width: 200px; vertical-align: top">Comments</span>
+			<textarea rows = "4" cols = "75"></textarea>
+			<br>
+			<strong style = "padding-left: 200px">* indicates a required field</strong> <input type = "submit" value = "Submit"><input type = "reset" value = "Reset Form Data to Defaults">
+	</fieldset>
+</form>
+<hr>
+<div class = "foothead">
+	<a href = "https://acme.com/">Acme Corp<a> &#8226; 801 Industrial Drive &#8226; Whitehorse, YK &#8226; Y1A &#8226; 3M1 <a href = "mailto:fakeaddress@host.ca?Subject=ACME%20Corp.%20Lab%20Analysis">fakeaddress@host.ca</a>
+</div>
+</body>
+
+</html>
